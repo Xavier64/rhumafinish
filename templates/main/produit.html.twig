@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<main class="container">
+    <div class="row">
+        <div class="col">
+            <img src="{{asset('images/' ~ produit.img)}}" alt="">
+        </div>
+        <div class="col">
+            <h2>{{produit.nom}}</h2>
+            <p>{{produit.description}}</p>
+            <p>{{produit.categorie.nom}}</p>
+            <h4>{{produit.prix}} €</h4>
+            <div class="d-flex justify-content-center">
+                <a href="{{path('app_ajout_panier', {id: produit.id})}}" class="btn btn-info w-50">Ajouter au panier</a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catalogue{% endblock %}
+
+{% block body %}
+<main class="container">
+    <h1>Catalogue</h1>
+    <div class="row">
+        {% for produit in produits %}
+        <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
+            {% include "template_parts/_card.html.twig" %}
+        </div>
+        {% endfor %}
+    </div>
+
+</main>
+{% endblock %}

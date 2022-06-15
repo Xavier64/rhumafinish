@@ -1,0 +1,9 @@
+<div class="card">
+    <img src="{{asset('images/' ~ produit.img)}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{produit.nom}}</h5>
+        <p class="card-text">{{produit.description}}</p>
+        <p class="card-text">{{produit.prix}} €</p>
+        <a href="{{path('app_produit', { id: produit.id})}}" class="btn btn-info w-100">Afficher le produit</a>
+    </div>
+</div>
